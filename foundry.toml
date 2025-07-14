@@ -1,0 +1,16 @@
+[profile.default]
+libs = ["lib"]
+out = "out"
+src = "src"
+
+remappings = [
+  "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+]
+
+[fuzz]
+runs = 10000
+
+[invariant]
+depth = 15
+runs = 256
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
