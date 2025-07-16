@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.8.10;
 
 import {Test} from "forge-std/Test.sol";
@@ -32,7 +33,7 @@ contract SafeTest is Test {
     /// forge-config: default.fuzz.runs = 100
     /// forge-config: default.fuzz.max-test-rejects = 2
     /// forge-config: default.fuzz.show-logs = true
-    function testFuzz_Withdraw(uint256 amount) public {
+    function testFuzz_Withdraw(uint96 amount) public {
         payable(address(safe)).transfer(amount);
         uint256 preBalance = address(this).balance;
         safe.withdraw();

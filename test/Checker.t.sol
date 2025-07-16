@@ -12,11 +12,12 @@ contract CheckerUnitTest is StdInvariant, Test {
     function setUp() public {
         checker = new Checker();
         targetContract(address(checker));
+        
     }
 
     ////////////////////////// Unit Tests //////////////////////////
 
-    function testInitialStateIsZero() public {
+    function testInitialStateIsZero() public view {
         assertEq(checker.invariant_should_not_alter(), 0);
     }
 

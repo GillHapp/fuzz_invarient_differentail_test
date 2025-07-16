@@ -10,9 +10,9 @@ contract Checker {
         // if (input == 42) {
         //     invariant_should_not_alter = 1;
         // }
-        if (lastInput == 99) {
-            invariant_should_not_alter = 1;
-        }
+        // if (lastInput == 99) {
+        //     invariant_should_not_alter = 1;
+        // }
         lastInput = input;
     }
 }
