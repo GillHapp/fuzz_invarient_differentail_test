@@ -10,10 +10,14 @@ contract CounterScript is Script {
     function setUp() public {}
 
     function run() public {
+        vm.createSelectFork("sepolia");
         vm.startBroadcast();
+        new Counter();
+        vm.stopBroadcast();
 
-        counter = new Counter();
-
+        vm.createSelectFork("Avalanche_fuji");
+        vm.startBroadcast();
+        new Counter();
         vm.stopBroadcast();
     }
 }

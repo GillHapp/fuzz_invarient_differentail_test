@@ -5,7 +5,7 @@ out = "out"
 src = "src"
 
 remappings = [
-  "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+  "openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
 ]
 
 [fuzz]
@@ -15,3 +15,11 @@ runs = 10000
 depth = 15
 runs = 256
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+[rpc_endpoints]
+Avalanche_fuji = "${Avalanche_fuji}"
+sepolia = "${SEPOLIA_URL}"
+
+[etherscan]
+Avalanche_fuji = {key = "${ETHERSCAN_API_KEY}"}
+sepolia = {key = "${ETHERSCAN_API_KEY}"}
